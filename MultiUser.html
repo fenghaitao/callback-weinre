@@ -3,41 +3,27 @@
 <!--
  * weinre is available under *either* the terms of the modified BSD license *or* the
  * MIT License (2008). See http://opensource.org/licenses/alphabetical for full text.
- * 
+ *
  * Copyright (c) 2010, 2011 IBM Corporation
 -->
 
 <html>
 <head>
-<title>weinre - MultiUser</title>
+<title>weinre - Muli-User</title>
 <link rel="stylesheet" href="css/main.css" type="text/css">
 <link rel="shortcut icon" href="images/weinre-icon-64x64.png" />
-<script src="scripts/main.js"></script>
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-736164-7']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
 </head>
 
 <body>
 
-<a class="no-decoration" href="https://github.com/phonegap/weinre"><div class="ribbon">Fork weinre on GitHub</div></a>
+<a class="no-decoration" href="https://github.com/callback/callback-weinre"><div class="ribbon">Fork weinre on GitHub</div></a>
 
 <!-- ======================================================================= -->
-<h1 class="page-title">weinre - MultiUser</h1>
+<h1 class="page-title">weinre - Muli-User</h1>
 
 <div class="toc">
   <a href="Home.html">Home</a>
-- <a href="TestDrive.html">Test Drive</a>
+- <a href="UserInterface.html">User Interface</a>
 - <a href="Installing.html">Installing</a>
 - <a href="Running.html">Running</a>
 - <a href="MultiUser.html">Multi-User</a>
@@ -52,12 +38,12 @@
 <!--
  * weinre is available under *either* the terms of the modified BSD license *or* the
  * MIT License (2008). See http://opensource.org/licenses/alphabetical for full text.
- * 
+ *
  * Copyright (c) 2010, 2011 IBM Corporation
 -->
 
 <p><span class="weinre">weinre</span> was originally designed so that each user
-that wanted to use <span class="weinre">weinre</span> would run their own 
+that wanted to use <span class="weinre">weinre</span> would run their own
 <span class="weinre">weinre</span> server.  The system has since been enhanced
 to support muliple users using the same server.
 
@@ -68,17 +54,17 @@ to support muliple users using the same server.
 id will be used in the client and target URLs of <span class="weinre">weinre</span>
 to scope your clients and targets from the clients and targets of other users.
 
-<p>There is no password, just an id.  There is no real security here.  
+<p>There is no password, just an id.  There is no real security here.
 The id is a secret shared between your
 debug target and client, but it is sent in the clear when your target and
 client connect to the server.  If someone else knows your <b>id</b>, they can
 connect to clients or targets you are running with that <b>id</b>.
 
-<p>So don't give your <b>id</b> to anyone else that you don't want to share 
+<p>So don't give your <b>id</b> to anyone else that you don't want to share
 with.
 
 <p>To keep your <b>id</b>'s familar but non-guessable, you might use a string
-consisting of your typical userid, followed by a dash, followed by another 
+consisting of your typical userid, followed by a dash, followed by another
 string not likely to be guessed by other people.
 
 <p>If you are paranoid, you can change your <b>id</b> every time you start
@@ -88,7 +74,7 @@ a debug session, of course.
 <h2>Using your id with the client</h2>
 
 <p>Typically when start a <span class="weinre">weinre</span> client session
-by visiting a URL like 
+by visiting a URL like
 
 <pre>
 http://some.server.xyz/client/
@@ -96,8 +82,8 @@ http://some.server.xyz/client/
 
 <p>To start
 a client with a particular id, append the hash character (<code>#</code>) and
-the id you want to use the URL.  For instance, to connect with the id 
-<code>itsReallyMe</code>, launch the client with the URL 
+the id you want to use the URL.  For instance, to connect with the id
+<code>itsReallyMe</code>, launch the client with the URL
 
 <pre>
 http://some.server.xyz/client/#itsReallyMe
@@ -129,16 +115,16 @@ used a &lt;script src&gt; element of:
 <ul class="spaced">
 
 <li>The <span class="weinre">weinre</span> server always runs in multi-user
-mode.  If you don't otherwise specify an <b>id</b>, the value of 
+mode.  If you don't otherwise specify an <b>id</b>, the value of
 <code>anonymous</code> will be used for the <b>id</b>.
 
 <li>The <b>id</b> is passed in the HTTP body of a POST request during the
 initial connection of the target and client to the server, and is not sent
 thereafter.  Thus, it should remain out of view in server logs and the like,
-though it will be visible for anyone who has access to the contents of 
+though it will be visible for anyone who has access to the contents of
 HTTP request bodies.
 
-<li>There is no programmatic interface on the <span class="weinre">weinre</span>
+<li>There is no programmatic interface in <span class="weinre">weinre</span>
 to list <b>id</b>'s in current use, for security reasons.  From the Remote panel
 of weinre, each connected client and target have their channel and id's listed,
 if you can't remember what id you used with the client.
@@ -150,7 +136,7 @@ if you can't remember what id you used with the client.
 <!--
  * weinre is available under *either* the terms of the modified BSD license *or* the
  * MIT License (2008). See http://opensource.org/licenses/alphabetical for full text.
- * 
+ *
  * Copyright (c) 2010, 2011 IBM Corporation
 -->
 
@@ -158,7 +144,7 @@ if you can't remember what id you used with the client.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <p>
   <a href="Home.html">Home</a>
-- <a href="TestDrive.html">Test Drive</a>
+- <a href="UserInterface.html">User Interface</a>
 - <a href="Installing.html">Installing</a>
 - <a href="Running.html">Running</a>
 - <a href="MultiUser.html">Multi-User</a>
