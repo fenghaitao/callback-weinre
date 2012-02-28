@@ -200,6 +200,9 @@ module.exports = class Timeline
                 @userData.interval = interval
 
             after: (receiver, args, result) ->
+                code = args[0]
+                return unless typeof(code) is "function"
+
                 code = @userData.code
                 return unless typeof(code) is "function"
 
@@ -230,6 +233,9 @@ module.exports = class Timeline
                 @userData.interval = interval
 
             after: (receiver, args, result) ->
+                code = args[0]
+                return unless typeof(code) is "function"
+
                 code = @userData.code
                 return unless typeof(code) is "function"
 
